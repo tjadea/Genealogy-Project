@@ -2,3 +2,16 @@ body {
     background-color: #222;
     color: #DDD;
 }
+
+a {
+    color: #DDD;
+    text-decoration: none;
+}
+
+tr :nth-child(odd) {
+    background-color: #333;
+}
+
+tr :nth-child(even) {
+    background-color: #555;
+}

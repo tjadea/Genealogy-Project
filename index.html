@@ -60,6 +60,8 @@
             var content = '';
 
             snapshot.forEach(function (data) {
+                // var key = Object.keys(snapshot.val())[0];
+                var key = data.key;
                 var name = data.val().title + " " + data.val().firstname + " " + data.val().middlename + " " + data.val().surname;
                 var dob = data.val().dob;
                 var gender = data.val().gender;
@@ -67,7 +69,7 @@
                 var parents = data.val().father + " and " + data.val().mother;
                 // var children = data.val().children;
                 content += '<tr>';
-                content += '<td>' + name + '</td>'; //column1
+                content += '<td><a href="'+ key +"\">" + name + '</a></td>'; //column1
                 content += '<td>' + dob + '</td>';//column2
                 content += '<td>' + gender + '</td>';//column3
                 content += '<td>' + married + '</td>';//column4
